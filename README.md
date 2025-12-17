@@ -42,7 +42,7 @@ npm run build
 ## &#x20;Xem trước
 
 Nếu bạn đã deploy (ví dụ: GitHub Pages, Netlify, Vercel), bạn có thể thêm liên kết tại đây, ví dụ:
-[🔗 Xem bản live](https://username.github.io/portofolio/)
+[🔗 Xem bản live](https://vuongngan-se.github.io/portofolio/)
 
 ## Về tôi
 
