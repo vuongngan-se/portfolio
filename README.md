@@ -42,8 +42,7 @@ npm run build
 ## &#x20;Xem trước
 
 Nếu bạn đã deploy (ví dụ: GitHub Pages, Netlify, Vercel), bạn có thể thêm liên kết tại đây, ví dụ:
-[🔗 Xem bản live](https://vuongngan-se.github.io/portofolio/)
-
+[🔗 Xem bản live]('https://vuongngan-se.github.io/portfolio/')
 ## Về tôi
 
 Xin chào, tôi là Vương Lê Bảo Ngân (username GitHub: `vuongngan-se`).
