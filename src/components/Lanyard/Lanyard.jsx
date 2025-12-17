@@ -7,8 +7,8 @@ import { BallCollider, CuboidCollider, Physics, RigidBody, useRopeJoint, useSphe
 import { MeshLineGeometry, MeshLineMaterial } from 'meshline';
 
 // replace with your own imports, see the usage snippet for details
-const cardGLB = "/portofolio/assets/card.glb";
-const lanyard = "/portofolio/assets/lanyard.png";
+const cardGLB = "/portfolio/assets/card.glb";
+const lanyard = "/portfolio/assets/lanyard.png";
 
 import * as THREE from 'three';
 import './Lanyard.css';
@@ -31,7 +31,7 @@ export default function Lanyard({ position = [0, 0, 30], gravity = [0, -40, 0], 
           <Lightformer intensity={0.2} color="white" position={[0, -1, 5]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.1, 1]} />
           <Lightformer intensity={0.3} color="white" position={[-1, -1, 1]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.1, 1]} />
           <Lightformer intensity={0.3} color="white" position={[1, 1, 1]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.1, 1]} />
-          <Lightformer intensity={1} color="white" position={[-0.1, 0, 10]} rotation={[0, Math.PI / 2, Math.PI / 3]} scale={[100, 10, 1]} />
+          <Lightformer intensity={5} color="white" position={[1, 0, 10]} rotation={[0, Math.PI / 2, Math.PI / 3]} scale={[100, 10, 1]} />
         </Environment>
       </Canvas>
     </div>
@@ -43,12 +43,12 @@ function Band({ maxSpeed = 50, minSpeed = 0 }) {
   const segmentProps = { type: 'dynamic', canSleep: true, colliders: false, angularDamping: 4, linearDamping: 4 };
   const { nodes, materials } = useGLTF(cardGLB);
   const texture = useTexture(lanyard);
-  const newCardTexture = useTexture('/portofolio/assets/vn1.jpg');
+  const newCardTexture = useTexture('/portfolio/assets/vn1.jpg');
 
   // Manually adjust texture properties to fix UV mapping
   newCardTexture.center.set(0.5, 0.5);
   newCardTexture.rotation = Math.PI;
-  newCardTexture.encoding = THREE.sRGBEncoding;
+  newCardTexture.colorSpace = THREE.SRGBColorSpace;
   newCardTexture.anisotropy = 16;
   newCardTexture.wrapS = THREE.RepeatWrapping;
   newCardTexture.wrapT = THREE.RepeatWrapping;
